@@ -1,0 +1,79 @@
+.form-control {
+  margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.form-control input,
+.form-control textarea {
+  border: 1px solid #a1a1a1;
+  font: inherit;
+  border-radius: 2px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline-color: #00695c;
+}
+
+.form-control input.invalid,
+.form-control textarea.invalid {
+  border-color: red;
+}
+
+.userdesh {
+  width: auto;
+  height: 100px;
+  background-color: cadetblue;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.userdesh h1 {
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.sidemain {
+  margin-left: 50px;
+  display: flex;
+  margin-left: -15px;
+  background-color: green;
+  width: 500px;
+  height: 185px;
+}
+
+.listSt {
+  background-color: cadetblue;
+  color: white;
+}
+
+.sidemain ul {
+  width: 1300px;
+}
+
+.centermain {
+  margin-left: 1px;
+  background-color: green;
+  width: 629px;
+  height: 187px;
+  margin-top: 0px;
+}
+
+.centermain ul li {
+  display: flex;
+  padding-right: 50px;
+}
+.centermain ul li h4 {
+  margin-left: 20px;
+}

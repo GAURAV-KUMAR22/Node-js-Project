@@ -1,0 +1,9 @@
+{
+  "env": {
+    "PORT": 3000,
+    "MONGO_USER": "choudharygaurav884",
+    "MONGO_PASSWORD": "310886Cluster.",
+    "MONGO_DEFAULT_DATABASE": "shop",
+    "STRIPE_KEY": "sk_test_51O2WGcSA02nW7pkxujZTNTAXXyo3NL166BtclF5GuHTyEFsM0O5keEDe5TRm2yt9RsZ6tdoGa68EZvHbd8qyDtWc00QLAgAbxV"
+  }
+}

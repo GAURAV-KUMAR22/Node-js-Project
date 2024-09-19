@@ -1,0 +1,48 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/orders.css">
+
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+            <main>
+                <% if(orders.length <=0) {%>
+                    <h1>Nothing there!</h1>
+                    <% } else { %>
+                        <ul>
+                            <% orders.forEach(order=> { %>
+                                <% order.products.forEach(product=> { %>
+                                    <div class="slide-container">
+                                        <div class="slide-content">
+                                            <div class="card-wrapper">
+                                                <div class="card">
+                                                    <div class="image-content">
+                                                        <div class="overlay">
+                                                            <div class="card-image">
+                                                                <img src="<%= product.product.imageUrl  %>" alt="image"
+                                                                    class="card-img" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <h2 class="name">
+                                                            Title: <%= product.product.title %>
+                                                                <!-- <%= order %> -->
+                                                        </h2>
+                                                        <p class="description">
+                                                            ID: <%= product.product._id %>
+                                                        </p>
+                                                        <p class="quantity">
+                                                            Quantity: <%= product.quantity %>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% }) %>
+                                        <% }) %>
+                        </ul>
+                        <% } %>
+            </main>
+            <%- include('../includes/end.ejs') %>

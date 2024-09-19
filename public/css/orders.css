@@ -1,0 +1,92 @@
+.orders {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.orders__item h1 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.orders__item {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.orders__products {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.orders__products-item {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #00695c;
+  color: #00695c;
+}
+/* 
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00695c;
+} */
+
+.slide-content {
+  margin: 0 40px;
+}
+.card {
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  background-color: #fff;
+  width: 524px;
+  display: flex;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #fff;
+  padding: 5px;
+  margin: 25px;
+}
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070f4;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.card-content .name {
+  margin: 25px;
+}
+
+.card-content .description {
+  margin: 25px;
+}
+.quantity {
+  margin-left: 25px;
+}
+
+.slide-container {
+  margin: 30px;
+  min-width: 50px;
+}
