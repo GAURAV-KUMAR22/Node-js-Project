@@ -7,7 +7,8 @@
     "node": "20"
   },
   "scripts": {
-    "build": " npm run vercel-build",
+    "build": "npm rum build",
+    "vercel-build": "npm run vercel-build"
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "start-server": "node app.js",
