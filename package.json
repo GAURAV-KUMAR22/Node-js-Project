@@ -10,8 +10,8 @@
     "build": "node build.js",
     "vercel-build": "node build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "start-server": "node app.js",
+    "start": "nodemon app.js",
+    "start-server": "nodemon app.js",
     "start:dev": "nodemon app.js"
   },
   "author": "Gaurav Kumar",

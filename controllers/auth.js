@@ -51,7 +51,8 @@ exports.getSignup = (req, res, next) => {
       username: '',
       email: '',
       password: '',
-      confirmPassword: ''
+      confirmPassword: '',
+      role: ''
     },
     validationErrors: []
   });
@@ -124,7 +125,8 @@ exports.postSignup = (req, res, next) => {
   const username = req.body.username;
   const email = req.body.email;
   const password = req.body.password;
-  console.log(email, password)
+  const role = req.body.role;
+  console.log(email, password, role)
   const errors = validationResult(req)
   console.log("validation issue", errors)
   if (!errors.isEmpty()) {
@@ -135,7 +137,8 @@ exports.postSignup = (req, res, next) => {
       oldInput: {
         email: email,
         password: password,
-        confirmPassword: req.body.confirmPassword
+        confirmPassword: req.body.confirmPassword,
+        role: role
       },
       validationErrors: errors.array()
     });
@@ -148,7 +151,8 @@ exports.postSignup = (req, res, next) => {
         username: username,
         email: email,
         password: hashedPassword,
-        cart: { items: [] }
+        cart: { items: [] },
+        role: role
       });
       return user.save();
     })

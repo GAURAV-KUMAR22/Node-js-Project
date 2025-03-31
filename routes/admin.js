@@ -5,6 +5,7 @@ const { body } = require('express-validator');
 
 const adminController = require('../controllers/admin');
 const isAuth = require('../middleware/is-auth');
+const isAdmin = require('../middleware/is-admin');
 
 const router = express.Router();
 // user Deshboard
@@ -13,14 +14,14 @@ router.get('/userdesh', adminController.getUserdesh)
 
 
 // /admin/add-product => GET
-router.get('/add-product', isAuth, adminController.getAddProduct);
+router.get('/add-product', isAuth, isAdmin, adminController.getAddProduct);
 
 // /admin/products => GET
 router.get('/products', isAuth, adminController.getProducts);
 
 // /admin/add-product => POST
 router.post(
-  '/add-product',
+  '/add-product', isAdmin,
   [
     body('title')
       .isString()
@@ -35,10 +36,10 @@ router.post(
   adminController.postAddProduct
 );
 
-router.get('/edit-product/:productId', isAuth, adminController.getEditProduct);
+router.get('/edit-product/:productId', isAuth, isAdmin, adminController.getEditProduct);
 
 router.post(
-  '/edit-product',
+  '/edit-product', isAdmin,
   [
     body('title')
       .isString()
@@ -54,8 +55,8 @@ router.post(
   adminController.postEditProduct
 );
 
-router.post('/delete-product', isAuth, adminController.postDeleteProduct);
+router.post('/delete-product', isAuth, isAdmin, adminController.postDeleteProduct);
 
-router.get('/updateprofile', isAuth, adminController.getUpdateProfile)
+router.get('/updateprofile', isAuth, isAdmin, adminController.getUpdateProfile)
 
 module.exports = router;

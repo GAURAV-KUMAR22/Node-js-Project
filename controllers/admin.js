@@ -25,7 +25,8 @@ exports.getUserdesh = (req, res, next) => {
 
 
 
-exports.getAddProduct = (req, res, next) => {
+exports.getAddProduct = async (req, res, next) => {
+  const userAdmin = await User.fin
   res.render('admin/edit-product', {
     pageTitle: 'Add Product',
     path: '/admin/add-product',
