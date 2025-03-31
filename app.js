@@ -16,8 +16,9 @@ const errorController = require('./controllers/error');
 const User = require('./models/user');
 
 
-const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}%40@node.gzezwi7.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
-const PORT = process.env.PORT;
+// const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}%40@node.gzezwi7.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
+const MONGODB_URI = 'mongodb://localhost:27017/testEcoomerce'
+const PORT = process.env.PORT || 50000;
 const app = express();
 const store = new MongoDBStore({
 
